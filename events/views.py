@@ -170,10 +170,10 @@ def update_venue(request, venue_id):
 		'form':form})
 
 def all_events(request):
-    event_list = Event.objects.all().order_by('-event_date')
-    return render(request, 'events/event_list.html', {
-        "event_list": event_list
-    })
+	event_list = Event.objects.all().order_by('-event_date')
+	return render(request, 'events/event_list.html', 
+		{'event_list': event_list})
+		
 def list_venues(request):
 	#venue_list = Venue.objects.all().order_by('?')
 	venue_list = Venue.objects.all()
