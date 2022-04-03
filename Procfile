@@ -1,1 +1,1 @@
-web: gunicorn panah.wsgi --log-file -
+web: gunicorn panah.wsgi 
