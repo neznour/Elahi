@@ -24,14 +24,14 @@
             <li>Occured: {{ event.Is_Past }}</li>
             <li>Venue Website: {{ event.venue.web }}</li>
             <li>Description: {{ event.description }} </li>
-            {% if user == event.manager %}
+        
             <li>Manager: {{ event.manager }} </li>
             <li>Attendees:
               {% for a in event.attendees.all%}
                 {{ user }} 
               {% endfor %}
              </li>
-            {% endif %}
+          
             <li>Venue: {{ event.venue }} </li>
 
            
