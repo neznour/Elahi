@@ -135,28 +135,26 @@
 </div>
 </div>
 
-    </center>
-  </br></br></br>
-    </section>
+<center>
+	<h1>Hello {{ name }}! Events For {{ month }} {{ year }}</h1>
 
+	As of {{ time }}
+	<br/><br/>
+	{{ cal|safe }}
+	<br/><br/>
+</center>
+	<h3>Events This Month...</h3>
+
+	{% if event_list %}
+		{% for event in event_list %}
+		<div class="card">
+  <div class="card-header">
+    {{ event }}
   </div>
-  <h1 id="CALENDAR"> Events For {{ month }} {{ year }}</h1>
-
-  {{ now }}
-  <br /><br />
-  <!--{{ cal|safe }}-->
-
-
-  <!--{% if event_list %}
-  {% for event in event_list %}
-  <div class="card">
-    <div class="card-header">
-      {{ event }}
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Venue: {{ event.venue }}</h5>
-      <p class="card-text">
-      <ul>
+  <div class="card-body">
+    <h5 class="card-title">Venue: {{ event.venue }}</h5>
+    <p class="card-text">
+    	<ul>
 
         <li>Date: {{ event.event_date }} </li></br>
         <li>Days Till Event: {{ event.Days_till }}</li></br>
@@ -168,7 +166,7 @@
 
       </ul>
       </p>
-    </div>-->
+    </div>
     {% if user.is_authenticated %}
     {% if user == event.manager %}
     <div class="card-footer text-muted">
