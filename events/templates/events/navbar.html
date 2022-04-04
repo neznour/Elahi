@@ -17,7 +17,7 @@
               EVENTS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a id="#event"class="dropdown-item" href="{% url 'list-events' %}">All Events</a></li>
+              <li><a id="event"class="dropdown-item" href="{% url 'list-events' %}">All Events</a></li>
               <li><a class="dropdown-item" href="{% url 'event_text' %}">Event Text File</a></li>
               {% if user.is_authenticated %}
               <li><a class="dropdown-item" href="{% url 'add-event' %}">Add Event</a></li>
