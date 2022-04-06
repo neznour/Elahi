@@ -1,5 +1,5 @@
 from multiprocessing import managers
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
 import calendar
 from calendar import HTMLCalendar
 from datetime import datetime
